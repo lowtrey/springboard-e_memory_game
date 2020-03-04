@@ -1,3 +1,39 @@
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: blanchedalmond;
+  justify-content: center;
+  display: flex;
+}
+
+.container {
+  border: 2px solid blue;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  width: 500px;
+  height: 550px;
+}
+
+.board {
+  border: 2px solid green;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  display: flex;
+  height: 82%;
+}
+
+.image {
+  border: 2px solid yellowgreen;
+  margin: 1%;
+  width: 100px;
+  height: 100px;
+}
+
+.controls {
+  border: 2px solid red;
+  justify-content: space-around;
+  display: flex;
+  height: 18%;
 }
