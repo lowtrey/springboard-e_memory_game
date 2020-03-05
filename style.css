@@ -1,24 +1,25 @@
 * {
   box-sizing: border-box;
 }
+
 body {
-  background-color: blanchedalmond;
+  background-color: grey;
   justify-content: center;
   display: flex;
 }
 
 .container {
+  justify-content: space-between;
   border: 2px solid blue;
   flex-direction: column;
-  justify-content: space-between;
   display: flex;
   width: 500px;
   height: 550px;
 }
 
 .board {
-  border: 2px solid green;
   justify-content: space-around;
+  border: 2px solid green;
   align-content: center;
   flex-wrap: wrap;
   display: flex;
@@ -26,13 +27,14 @@ body {
 }
 
 .image {
-  width: 100%;
+  border-radius: 10%;
   height: 100%;
+  width: 100%;
 }
 
 .controls {
-  border: 2px solid red;
   justify-content: space-around;
+  border: 2px solid red;
   display: flex;
   height: 18%;
 }
@@ -41,46 +43,40 @@ body {
 
 .flip-card {
   background-color: transparent;
-  margin: 1%;
-  width: 100px;
-  height: 100px;
   perspective: 1000px;
+  height: 100px;
+  width: 100px;
+  margin: 1%;
 }
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
   transform-style: preserve-3d;
+  transition: transform 0.8s;
+  text-align: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-/* .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-} */
 
 /* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  border-radius: 10%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: dodgerblue;
+  background-color: darkolivegreen;
   color: black;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
-  color: white;
   transform: rotateY(180deg);
 }
